@@ -17,8 +17,32 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.blueAccent,
         ),
-        body: Center(
-          child: Text('Bienvenue dans cet atelier!'),
+        body: Container(
+          alignment: Alignment.topCenter,
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+              Text(
+                'Bienvenue dans mon atelier Flutter !',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepPurple,
+                ),
+              ),
+              SizedBox(height: 20),
+              Image.network(
+                'https://picsum.photos/id/180/200/200',
+                width: 200,
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Je découvre comment construire une interface Flutter simple et élégante.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16),
+              ),
+            ],
+          ),
         ),
       ),
     );
